@@ -1,0 +1,4 @@
+site_name: Mission Chief Bot
+nav:
+    - Home: index.md
+theme: readthedocs
