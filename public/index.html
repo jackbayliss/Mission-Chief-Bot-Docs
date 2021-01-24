@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Mission Chief Bot</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Mission Chief Bot</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#getting-the-bot">Getting the bot</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#main-files">Main Files</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#main-bot-files">Main bot files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#config-file">Config file</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#file-structure">File structure</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#missions">Missions</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#links-missingjson">Links / Missing.json</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#running-via-aws">Running via AWS</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#initial-setup">Initial Setup</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#connecting-to-your-ec2-instance">Connecting to your EC2 instance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bot-installation">Bot installation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#running-the-bot-on-digital-ocean">Running the bot on Digital Ocean</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#sign-up">Sign Up</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#installing-the-bot-to-the-droplet">Installing the bot to the droplet</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Mission Chief Bot</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="welcome-to-missionchief-bot">Welcome to MissionChief Bot</h1>
+<h2 id="getting-the-bot">Getting the bot</h2>
+<ol>
+<li>All users must sign up via the <a href="https://missionchiefbot.com/">website</a></li>
+<li>Pay, Payment is taken monthly, but the pricing is simple- it's £1 p/m per account and all done via the website above.</li>
+<li>Once you've paid you'll see new options on the dashboard, simply click "add-user" and add your <strong><em>in game name</em></strong> there.</li>
+<li>Download the newest release via GitHub for your operating system.</li>
+<li>Extract the bot and edit the config to add your login information</li>
+<li>Run the generator! (generate.exe/.py) The generator is required in order to create mission files, without those the bot simply won't operate.</li>
+<li>Run the bot!</li>
+</ol>
+<h2 id="main-files">Main Files</h2>
+<h3 id="main-bot-files">Main bot files</h3>
+<ol>
+<li>MissionChiefBot - This is the main bot, this will run the despatching tasks etc.</li>
+<li>Restarter - This effectively is a cradle for the MissionChiefBot- if it major crashes (i.e exits) at all the bot will be auto restart. Usually good for people that want to run it while they're asleep etc.</li>
+<li>generate - This is in charge of grabbing new missions and the data, make sure you manually run this every time there's new missions.</li>
+</ol>
+<h3 id="config-file">Config file</h3>
+<p>The config file is found in the config.ini, any editiable options for the user will always be in there.</p>
+<h3 id="file-structure">File structure</h3>
+<p>The bot follows a simple folder structure. The main files will always be in the main directory. Anything to do with the bot in terms of operations or missions will be found in the <code>json</code> folder.</p>
+<h4 id="missions">Missions</h4>
+<p>Missions are found in the json folder, then into regions, then in your selected region, then into the missions folder. These missions are completely customizeable by the user. The bot will follow any edited missions.</p>
+<h4 id="links-missingjson">Links / Missing.json</h4>
+<p>These files essentially tell the bot which category belongs to which vehicles. Because the game can vary in names (i.e plural non-plural) these files can be edited and changed. </p>
+<h2 id="running-via-aws">Running via AWS</h2>
+<h3 id="initial-setup">Initial Setup</h3>
+<ol>
+<li>Sign up for AWS via <a href="https://portal.aws.amazon.com/billing/signup?refid=jackbaylissgithub">here</a></li>
+<li>Ensure you enter your card details etc, and verify your account (dont worry, you wont be charged for the server we will be using the free tier- your card may be charged $1 to verify your card)</li>
+<li>Once you're in go to your console via <a href="https://console.aws.amazon.com">this</a> link</li>
+<li>In the find services search, type in <code>EC2</code> and click it- or if you don't have this click <code>Launch a virtual machine</code> it'll do the same thing.</li>
+<li>Check on the top right that your region is correct for where you live- I.E UK would be London etc.</li>
+<li>In the top search type in <code>Docker</code> and click enter. You should see something similar to <code>Amazon Linux AMI 2018.03.0 (HVM</code> ensure that it says <code>FREE TIER ELIGIBLE</code> at the bottom. This will make sure it's free. </li>
+<li>Click select on the right hand side.</li>
+<li>Click the <code>free tier eligible</code> instance, for me it's <code>t2.micro</code> ensure it's selected and click <code>Review and launch instance</code></li>
+<li>Click launch</li>
+<li>Click <code>create a key pair</code> - enter a random name and download the file <strong>KEEP THIS FILE SAFE</strong></li>
+<li>Click <code>view instances</code></li>
+<li>Wait around 4 minutes for the instance to get started.</li>
+</ol>
+<h3 id="connecting-to-your-ec2-instance">Connecting to your EC2 instance</h3>
+<ol>
+<li>Assuming you're still on the instance page, click the instance you just made and click <code>connect</code> at the top</li>
+<li>The easiest thing to do is click <code>EC2 Instance Connect (browser-based SSH connection)</code> this will connect you to the server via the browser-- or the alternative it to use PuTTY (If you don't want to use PuTTY skip to number 10) continue below on how to use PuTTY </li>
+<li>So, you want to use PuTTY, first thing first download PuTTY- and install it.</li>
+<li>Once installed open PuTTYgen, and click <code>load</code> then select your .pem key you saved earlier. Make sure you change the file type to <code>all</code></li>
+<li>Click <code>save private key</code> and save it to somewhere you know... </li>
+<li>Now open PuTTY, on the left hand side go to connection -&gt; ssh and then auth.</li>
+<li>Under private key file click browse, and select the file you just made.</li>
+<li>Now, finally we can go back to Amazon, click connect again and this time click <code>a standalone SSH client</code> you'll see a name similar to <code>ec-23-23232332.compute.amazonaws.com</code>copy this name go back to Putty and go to Session on the left hand side at the top. Paste the name into there and then-- click connect.</li>
+<li>Your black box will say <code>login as:</code> just type in <code>ec2-user</code> and click enter.</li>
+<li>You're in!</li>
+<li>Type <code>sudo yum update -y</code> and click enter, then do <code>sudo yum install docker -y</code></li>
+<li>Type <code>sudo service docker start</code> and let it complete. Then do <code>sudo usermod -a -G docker ec2-user</code></li>
+</ol>
+<h3 id="bot-installation">Bot installation</h3>
+<ol>
+<li>
+<p>Once you're in type in <code>sudo docker pull jjbayliss/mission-chief-v2</code>, let it run it'll set up the image for the bot. </p>
+</li>
+<li>
+<p>Once the image is done simply run <code>sudo docker run -it -d jjbayliss/mission-chief-v2</code>. This will create a container for you.</p>
+</li>
+<li>
+<p>Run <code>sudo docker ps -a</code> and copy the name of your container there should only be one, then run <code>sudo docker exec -it [container name] bash</code> this will take you into the container in a bash.</p>
+</li>
+<li>
+<p>You should be brought straight into a container, all you'll need to do is <code>cd Mission-Chief-Bot</code></p>
+</li>
+<li>
+<p>type <code>git checkout -f</code> followed by <code>git pull origin mac</code> this will update the bot to the newest version. </p>
+</li>
+<li>
+<p>Next do <code>vim config.ini</code> you'll want to press the <code>I</code> key to edit the document, and add your username, password and region etc. Once done press <code>ESC</code> and type <code>:wq</code> this will save the document.</p>
+</li>
+<li>
+<p>Run <code>python3.9 MissionChiefBot.py</code> to run the base bot, and you're done!</p>
+</li>
+<li>To exit the docker container press <code>CTRL + D</code>, and if you need to enter the bot again just follow from step 6.</li>
+</ol>
+<h2 id="running-the-bot-on-digital-ocean">Running the bot on Digital Ocean</h2>
+<h3 id="sign-up">Sign Up</h3>
+<ol>
+<li>First of all I'd recommened setting up a Digital Ocean account, or any other cloud provider that you can use Docker with. You can set an account for Digital Ocean <a href="https://m.do.co/c/741cf5923606">here</a> (It's a referral link)</li>
+</ol>
+<p>(Make sure you install docker if you're going outside of DO)</p>
+<ol>
+<li>Once you've signed up to Digital Ocean simply create a droplet. You can install docker straight to it via the marketplace so i'd suggest doing that. (You can use any droplet, this will work on the smallest $5 A month one)</li>
+</ol>
+<h3 id="installing-the-bot-to-the-droplet">Installing the bot to the droplet</h3>
+<ol>
+<li>
+<p>Connect into the droplet, you can do this via going to the Access Console or alternatively SSH into the droplet.</p>
+</li>
+<li>
+<p>Once you're in type in <code>docker pull jjbayliss/mission-chief-v2</code>, let it run it'll set up the image for the bot. </p>
+</li>
+<li>
+<p>Once the image is done simply run <code>docker run -it -d jjbayliss/mission-chief-v2</code>. This will create a container for you.</p>
+</li>
+<li>
+<p>Run <code>docker ps -a</code> and copy the name of your container there should only be one, then run <code>docker exec -it [container name] bash</code> this will take you into the container in a bash.</p>
+</li>
+<li>
+<p>You should be brought straight into a container, all you'll need to do is <code>cd Mission-Chief-Bot</code></p>
+</li>
+<li>
+<p>type <code>git checkout -f</code> followed by <code>git pull origin mac</code> this will update the bot to the newest version. </p>
+</li>
+<li>
+<p>Next do <code>vim config.ini</code> you'll want to press the <code>I</code> key to edit the document, and add your username, password and region etc. Once done press <code>ESC</code> and type <code>:wq</code> this will save the document.</p>
+</li>
+<li>
+<p>Run <code>python3.9 MissionChiefBot.py</code> to run the base bot, and you're done! (bare in mind you'll need to run git pull to update the repo)</p>
+</li>
+<li>
+<p>To exit the docker container press <code>CTRL + D</code>, and if you need to enter the bot again just follow from step 6.</p>
+</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.1.2
+Build Date UTC : 2021-01-17 01:35:46.431032+00:00
+-->
